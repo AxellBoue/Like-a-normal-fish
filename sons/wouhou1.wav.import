@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wouhou1.wav-4fdeb8c5f818da2804f9b173f8842708.sample"
+
+[deps]
+
+source_file="res://sons/wouhou1.wav"
+dest_files=[ "res://.import/wouhou1.wav-4fdeb8c5f818da2804f9b173f8842708.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

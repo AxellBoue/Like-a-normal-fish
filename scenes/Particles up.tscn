@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://3D/particules mesh.tres" type="CubeMesh" id=1]
+[ext_resource path="res://scenes/Particles grad.tres" type="Gradient" id=2]
+
+[sub_resource type="GradientTexture" id=1]
+gradient = ExtResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 0.4
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0.5, 0 )
+initial_velocity = 0.5
+scale = 0.8
+scale_random = 1.0
+color_ramp = SubResource( 1 )
+hue_variation_random = 1.0
+
+[node name="Particles up" type="Particles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.640222, -0.0108975, 0.0343513 )
+emitting = false
+amount = 100
+one_shot = true
+randomness = 1.0
+process_material = SubResource( 2 )
+draw_pass_1 = ExtResource( 1 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rock'n Roll Circuit.ogg-1036a698918dcd729d3c1360be3b5900.oggstr"
+
+[deps]
+
+source_file="res://sons/Rock'n Roll Circuit.ogg"
+dest_files=[ "res://.import/Rock'n Roll Circuit.ogg-1036a698918dcd729d3c1360be3b5900.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

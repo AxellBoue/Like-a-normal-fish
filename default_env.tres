@@ -1,0 +1,26 @@
+[gd_resource type="Environment" load_steps=4 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.047619, 0.825175, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.551302, 0.68851, 0.797363, 1, 0.880623, 0.895303, 0.98877, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ProceduralSky" id=3]
+
+[resource]
+background_mode = 3
+background_sky = SubResource( 3 )
+background_color = Color( 0.313726, 0.576471, 0.627451, 1 )
+background_energy = 1.16
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_sky_contribution = 0.5
+fog_color = Color( 0.313726, 0.576471, 0.627451, 1 )
+fog_sun_color = Color( 1, 1, 1, 1 )
+fog_depth_end = 50.0
+fog_height_min = 0.0
+fog_height_max = 10.0
+dof_blur_far_distance = 27.87
+dof_blur_far_transition = 28.97
+adjustment_color_correction = SubResource( 2 )

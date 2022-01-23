@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.0.0 commit date:2021-12-02, commit time:18:35, hash:f1cca3055776</authoring_tool>
+    </contributor>
+    <created>2022-01-18T23:43:05</created>
+    <modified>2022-01-18T23:43:05</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects/>
+  <library_images/>
+  <library_geometries>
+    <geometry id="Cube_017-mesh" name="Cube.017">
+      <mesh>
+        <source id="Cube_017-mesh-positions">
+          <float_array id="Cube_017-mesh-positions-array" count="24">4.5 -12.89222 0 4.399363 -12.89222 0.02093523 4.5 7.107779 0 4.399363 7.107779 0.02093523 -4.500001 -12.89222 0 -4.399365 -12.89222 0.02093523 -4.500001 7.107779 0 -4.399365 7.107779 0.02093523</float_array>
+          <technique_common>
+            <accessor source="#Cube_017-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube_017-mesh-normals">
+          <float_array id="Cube_017-mesh-normals-array" count="24">0 -1 0 -0.2036689 0 -0.9790399 0 1 8.09841e-5 0.2036689 0 -0.9790399 0 0 1 0 0 -1 0 -1 5.04786e-5 0 1 5.17729e-5</float_array>
+          <technique_common>
+            <accessor source="#Cube_017-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cube_017-mesh-map-0">
+          <float_array id="Cube_017-mesh-map-0-array" count="72">0.3180014 0.09399354 0.8546426 0.09273111 0.3119329 0.09273111 0.9389821 -0.9980276 0.9490253 0.9978932 0.9490253 -0.9980276 0.1514257 0.0939936 0.688067 0.09273117 0.1453572 0.09273117 0.06090396 0.9978932 0.0508607 -0.9980276 0.0508607 0.9978932 0.1794269 0.82889 0.8290374 0.1792794 0.8290374 0.82889 0.9389821 0.9978932 0.06090396 -0.9980276 0.06090396 0.9978932 0.3180014 0.09399354 0.8485742 0.09399354 0.8546426 0.09273111 0.9389821 -0.9980276 0.9389821 0.9978932 0.9490253 0.9978932 0.1514257 0.0939936 0.6819986 0.0939936 0.688067 0.09273117 0.06090396 0.9978932 0.06090396 -0.9980276 0.0508607 -0.9980276 0.1794269 0.82889 0.1794269 0.1792794 0.8290374 0.1792794 0.9389821 0.9978932 0.9389821 -0.9980276 0.06090396 -0.9980276</float_array>
+          <technique_common>
+            <accessor source="#Cube_017-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cube_017-mesh-vertices">
+          <input semantic="POSITION" source="#Cube_017-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#Cube_017-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cube_017-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cube_017-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 6 0 1 2 0 2 1 1 3 2 1 4 0 1 5 5 2 6 0 2 7 4 2 8 7 3 9 4 3 10 6 3 11 6 4 12 0 4 13 2 4 14 3 5 15 5 5 16 7 5 17 3 6 18 7 6 19 6 6 20 1 1 21 3 1 22 2 1 23 5 7 24 1 7 25 0 7 26 7 3 27 5 3 28 4 3 29 6 4 30 4 4 31 0 4 32 3 5 33 1 5 34 5 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="ligne_droite" name="ligne droite" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Cube_017-mesh" name="ligne droite"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

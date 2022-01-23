@@ -1,0 +1,178 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://textures/bouton-intro.png" type="Texture" id=2]
+[ext_resource path="res://typos/typo boutons menu.tres" type="DynamicFont" id=3]
+[ext_resource path="res://typos/new_theme.tres" type="Theme" id=4]
+[ext_resource path="res://scripts/Options.gd" type="Script" id=5]
+[ext_resource path="res://textures/slide-base.png" type="Texture" id=6]
+[ext_resource path="res://textures/slide-grab.png" type="Texture" id=7]
+[ext_resource path="res://textures/bouton-intro-o.png" type="Texture" id=8]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 395, 92 )
+margin_left = 50.0
+margin_right = 50.0
+margin_top = 30.0
+margin_bottom = 40.0
+modulate_color = Color( 0.988235, 0.980392, 0.435294, 1 )
+
+[node name="panel options" type="PanelContainer"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = -166.721
+margin_right = 450.0
+margin_bottom = 421.279
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hbox" type="VBoxContainer" parent="."]
+margin_left = 50.0
+margin_top = 30.0
+margin_right = 850.0
+margin_bottom = 667.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="hbox"]
+margin_right = 800.0
+margin_bottom = 80.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Music volume"
+
+[node name="music slider" type="HSlider" parent="hbox"]
+margin_top = 84.0
+margin_right = 800.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 800, 0 )
+focus_neighbour_bottom = NodePath("../sons  slider")
+custom_icons/grabber_highlight = ExtResource( 7 )
+custom_icons/grabber = ExtResource( 6 )
+min_value = -30.0
+max_value = 0.0
+tick_count = 31
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="hbox"]
+margin_top = 130.0
+margin_right = 800.0
+margin_bottom = 210.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Sound volume"
+
+[node name="sons  slider" type="HSlider" parent="hbox"]
+margin_top = 214.0
+margin_right = 800.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 800, 0 )
+focus_neighbour_top = NodePath("../music slider")
+focus_neighbour_bottom = NodePath("../contraste  slider")
+custom_icons/grabber_highlight = ExtResource( 7 )
+custom_icons/grabber = ExtResource( 6 )
+min_value = -30.0
+max_value = 0.0
+tick_count = 31
+ticks_on_borders = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="hbox"]
+bus = "Sons"
+
+[node name="Label3" type="Label" parent="hbox"]
+margin_top = 260.0
+margin_right = 800.0
+margin_bottom = 340.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Contrast"
+
+[node name="contraste  slider" type="HSlider" parent="hbox"]
+margin_top = 344.0
+margin_right = 800.0
+margin_bottom = 386.0
+rect_min_size = Vector2( 800, 0 )
+focus_neighbour_top = NodePath("../sons  slider")
+focus_neighbour_bottom = NodePath("../hue  slider")
+custom_icons/grabber_highlight = ExtResource( 7 )
+custom_icons/grabber = ExtResource( 6 )
+min_value = 0.5
+max_value = 8.0
+step = 0.5
+value = 0.5
+tick_count = 18
+ticks_on_borders = true
+
+[node name="Label4" type="Label" parent="hbox"]
+margin_top = 390.0
+margin_right = 800.0
+margin_bottom = 470.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Hue modification"
+
+[node name="hue  slider" type="HSlider" parent="hbox"]
+margin_top = 474.0
+margin_right = 800.0
+margin_bottom = 516.0
+rect_min_size = Vector2( 800, 0 )
+focus_neighbour_top = NodePath("../contraste  slider")
+focus_neighbour_bottom = NodePath("../MarginContainer/retour")
+custom_icons/grabber_highlight = ExtResource( 7 )
+custom_icons/grabber = ExtResource( 6 )
+max_value = 360.0
+step = 10.0
+tick_count = 37
+ticks_on_borders = true
+
+[node name="MarginContainer" type="MarginContainer" parent="hbox"]
+margin_top = 520.0
+margin_right = 800.0
+margin_bottom = 637.0
+custom_constants/margin_right = 400
+custom_constants/margin_top = 25
+
+[node name="retour" type="TextureButton" parent="hbox/MarginContainer"]
+margin_top = 25.0
+margin_right = 400.0
+margin_bottom = 117.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_neighbour_top = NodePath("../../hue  slider")
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="hbox/MarginContainer/retour"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Retour"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="value_changed" from="hbox/music slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="hbox/sons  slider" to="." method="_on_sons__slider_value_changed"]
+[connection signal="value_changed" from="hbox/contraste  slider" to="." method="_on_contraste__slider_value_changed"]
+[connection signal="value_changed" from="hbox/hue  slider" to="." method="_on_hue__slider_value_changed"]
+[connection signal="button_down" from="hbox/MarginContainer/retour" to="." method="_on_retour_button_down"]

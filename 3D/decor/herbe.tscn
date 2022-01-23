@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://materials/herbe.tres" type="Material" id=1]
+
+[sub_resource type="QuadMesh" id=13]
+
+[node name="herbe" type="CSGMesh"]
+transform = Transform( -1.74527, -1.86798, -3.19399e-08, 0, -1.11745e-07, 1, -1.86798, 1.74527, 2.98418e-08, 32.7168, 0.01, -14.731 )
+mesh = SubResource( 13 )
+material = ExtResource( 1 )

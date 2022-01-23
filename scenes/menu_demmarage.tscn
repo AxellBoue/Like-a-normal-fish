@@ -1,0 +1,276 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/bouton_menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://textures/ecran-titre.jpg" type="Texture" id=2]
+[ext_resource path="res://typos/new_theme.tres" type="Theme" id=3]
+[ext_resource path="res://typos/typo boutons menu.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scripts/StartScreen.gd" type="Script" id=5]
+[ext_resource path="res://sons/Title screen !.ogg" type="AudioStream" id=6]
+[ext_resource path="res://typos/OpenDyslexic-Regular.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://scenes/options.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/image_modif.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.180392, 0.376471, 0.419608, 0 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -8.0
+autoplay = true
+bus = "Musique"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="action" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 223.0
+margin_top = -81.0
+margin_right = 423.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Space"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="action2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 338.37
+margin_top = -81.0
+margin_right = 538.37
+margin_bottom = 19.0
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Shift"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="action3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 112.125
+margin_top = -81.0
+margin_right = 312.125
+margin_bottom = 19.0
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "E"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pause" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 598.343
+margin_top = -80.5874
+margin_right = 798.343
+margin_bottom = 19.4127
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Echap"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="haut" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 600.343
+margin_top = -416.587
+margin_right = 800.343
+margin_bottom = -316.587
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "A"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bas" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 600.343
+margin_top = -316.587
+margin_right = 800.343
+margin_bottom = -216.587
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "S"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gauche" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 502.343
+margin_top = -316.587
+margin_right = 702.343
+margin_bottom = -216.587
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "W"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="droite" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 700.343
+margin_top = -316.587
+margin_right = 900.343
+margin_bottom = -216.587
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "D"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="boutons menu" type="VBoxContainer" parent="."]
+margin_left = 642.0
+margin_top = 608.0
+margin_right = 1037.0
+margin_bottom = 934.0
+custom_constants/separation = 25
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play" parent="boutons menu" instance=ExtResource( 1 )]
+focus_neighbour_bottom = NodePath("../options")
+
+[node name="Label" type="Label" parent="boutons menu/play"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" parent="boutons menu" instance=ExtResource( 1 )]
+margin_top = 117.0
+margin_bottom = 209.0
+focus_neighbour_top = NodePath("../play")
+focus_neighbour_bottom = NodePath("../quit")
+
+[node name="Label2" type="Label" parent="boutons menu/options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Options"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" parent="boutons menu" instance=ExtResource( 1 )]
+margin_top = 234.0
+margin_bottom = 326.0
+focus_neighbour_top = NodePath("../options")
+
+[node name="Label3" type="Label" parent="boutons menu/quit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panel options" parent="options" instance=ExtResource( 8 )]
+
+[node name="image_modif" parent="." instance=ExtResource( 9 )]
+[connection signal="button_down" from="boutons menu/play" to="boutons menu" method="_on_play_button_down"]
+[connection signal="button_down" from="boutons menu/options" to="boutons menu" method="_on_options_button_down"]
+[connection signal="button_down" from="boutons menu/quit" to="boutons menu" method="_on_quit_button_down"]

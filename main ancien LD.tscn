@@ -1,0 +1,1292 @@
+[gd_scene load_steps=71 format=2]
+
+[ext_resource path="res://3D/decor/sol.tscn" type="PackedScene" id=1]
+[ext_resource path="res://3D/animaux/crab.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/crab.gd" type="Script" id=3]
+[ext_resource path="res://3D/decor/rocher cube.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/BatonARamasser.gd" type="Script" id=5]
+[ext_resource path="res://scripts/PNJ.gd" type="Script" id=6]
+[ext_resource path="res://3D/course/course debut.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scripts/Depart.gd" type="Script" id=8]
+[ext_resource path="res://3D/animaux/lieu jaune.tscn" type="PackedScene" id=9]
+[ext_resource path="res://3D/course/ligne droite.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scripts/GameManager.gd" type="Script" id=11]
+[ext_resource path="res://typos/new_theme.tres" type="Theme" id=12]
+[ext_resource path="res://typos/font_annonces.tres" type="DynamicFont" id=13]
+[ext_resource path="res://typos/font_annonces_bold.tres" type="DynamicFont" id=14]
+[ext_resource path="res://3D/course/tremplin etroit.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scripts/PoissonMove.gd" type="Script" id=16]
+[ext_resource path="res://new_environment.tres" type="Environment" id=17]
+[ext_resource path="res://3D/decor/rocher deux bosses.tscn" type="PackedScene" id=18]
+[ext_resource path="res://3D/course/virages/virage d 90.tscn" type="PackedScene" id=19]
+[ext_resource path="res://3D/course/virages/virage d 180.tscn" type="PackedScene" id=20]
+[ext_resource path="res://3D/decor/rocher haut grand.tscn" type="PackedScene" id=21]
+[ext_resource path="res://3D/decor/rocher rebord.tscn" type="PackedScene" id=22]
+[ext_resource path="res://3D/decor/rocher penche.tscn" type="PackedScene" id=23]
+[ext_resource path="res://3D/decor/rocher petit.tscn" type="PackedScene" id=24]
+[ext_resource path="res://3D/decor/rocher rond haut.tscn" type="PackedScene" id=25]
+[ext_resource path="res://3D/decor/rocher rond bosselé.tscn" type="PackedScene" id=26]
+[ext_resource path="res://3D/decor/rocher rond 1.tscn" type="PackedScene" id=27]
+[ext_resource path="res://3D/animaux/grondin.tscn" type="PackedScene" id=28]
+[ext_resource path="res://3D/course/feu rouge.tscn" type="PackedScene" id=29]
+[ext_resource path="res://materials/night_shader_mat.tres" type="Material" id=30]
+[ext_resource path="res://capture test nuit.png" type="Texture" id=31]
+[ext_resource path="res://3D/animaux/PNJ lieu jaune.tscn" type="PackedScene" id=32]
+[ext_resource path="res://3D/animaux/feedback pnj.tscn" type="PackedScene" id=33]
+[ext_resource path="res://3D/decor/crevasse fin.tscn" type="PackedScene" id=34]
+[ext_resource path="res://3D/course/virages/virage smooth 130.tscn" type="PackedScene" id=35]
+[ext_resource path="res://3D/course/virages/virage d 60.tscn" type="PackedScene" id=36]
+[ext_resource path="res://3D/course/virages/virage d 160.tscn" type="PackedScene" id=37]
+[ext_resource path="res://3D/course/virages/virage d 30.tscn" type="PackedScene" id=38]
+[ext_resource path="res://3D/course/virages/virage smooth 90.tscn" type="PackedScene" id=39]
+[ext_resource path="res://3D/course/virages/virage smooth 60.tscn" type="PackedScene" id=40]
+[ext_resource path="res://3D/course/barriere petite.tscn" type="PackedScene" id=41]
+[ext_resource path="res://scripts/ZoneDeclencheEvent.gd" type="Script" id=42]
+[ext_resource path="res://scenes/Particles down.tscn" type="PackedScene" id=43]
+[ext_resource path="res://scenes/Particles up.tscn" type="PackedScene" id=44]
+[ext_resource path="res://3D/centre controle/centre de controle.tscn" type="PackedScene" id=45]
+[ext_resource path="res://3D/centre controle/centre de controle 2.tscn" type="PackedScene" id=46]
+[ext_resource path="res://3D/course/virages/virage smooth 30.tscn" type="PackedScene" id=47]
+[ext_resource path="res://3D/objets/baton.tscn" type="PackedScene" id=48]
+[ext_resource path="res://scenes/Zone texte.tscn" type="PackedScene" id=49]
+[ext_resource path="res://3D/animaux/bernard lhermite 1.tscn" type="PackedScene" id=50]
+[ext_resource path="res://3D/animaux/bernard lhermite 3.tscn" type="PackedScene" id=51]
+[ext_resource path="res://3D/animaux/bernard lhermite 2 orange.tscn" type="PackedScene" id=52]
+[ext_resource path="res://3D/animaux/grondin bleu.tscn" type="PackedScene" id=53]
+[ext_resource path="res://3D/animaux/lieu jaune vert.tscn" type="PackedScene" id=54]
+[ext_resource path="res://scripts/ZonCameraTourne.gd" type="Script" id=55]
+[ext_resource path="res://scripts/TextesUi.gd" type="Script" id=56]
+[ext_resource path="res://3D/course/barriere grande.tscn" type="PackedScene" id=57]
+[ext_resource path="res://scripts/ZoneTexte.gd" type="Script" id=58]
+[ext_resource path="res://scenes/bouton_menu.tscn" type="PackedScene" id=59]
+[ext_resource path="res://typos/typo boutons menu.tres" type="DynamicFont" id=60]
+[ext_resource path="res://MenuInGame.gd" type="Script" id=61]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.172549, 0.247059, 0.368627, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.292505, 0.0237881, 3.86209 )
+
+[sub_resource type="CylinderShape" id=3]
+radius = 7.02949
+height = 0.665511
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 4.95123, 1, 1.15176 )
+
+[sub_resource type="Curve3D" id=9]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -1.28632, 2.42946, -0.028717, 0, 0, 0, 0, 0, 0, -0.696703, 2.45014, 16.2655, 0, 0, 0, 0, 0, 0, -0.717391, 2.40877, 30.7805, 0, 0, 0, 0, 0, 0, -0.665671, 2.42946, 36.1591, 0, 0, 0, 0, 0, 0, 0.898372, 2.38982, 57.504, 0, 0, 0, 0, 0, 0, -0.943584, 2.41416, 65.02, 0, 0, 0, 0, 0, 0, -8.17202, 2.41416, 72.6946, 0, 0, 0, 0, 0, 0, -10.2245, 2.41416, 78.406, 0, 0, 0, 0, 0, 0, -10.1353, 2.41416, 86.0806, 0, 0, 0, 0, 0, 0, -6.20874, 2.41416, 90.4534, 0, 0, 0, 0, 0, 0, 5.65453, 2.41416, 87.8817, 0, 0, 0, 0, 0, 0, 12.9722, 2.41416, 85.8291, 0, 0, 0, 0, 0, 0, 18.2374, 2.41416, 81.2779, 0, 0, 0, 0, 0, 0, 26.9829, 2.41416, 59.2356, 0, 0, 0, 0, 0, 0, 31.8911, 2.41416, 57.897, 0, 0, 0, 0, 0, 0, 37.6024, 2.41416, 64.59, 0, 0, 0, 0, 0, 0, 41.9752, 2.41416, 62.1806, 0, 0, 0, 0, 0, 0, 39.7028, 2.41416, 56.2723, 0, 0, 0, 0, 0, 0, 33.4974, 2.41416, 40.1383, 0, 0, 0, 0, 0, 0, 33.33, 2.41416, 30.19, 0, 0, 0, 0, 0, 0, 35.6502, 2.41416, 22.9615, 0, 0, 0, 0, 0, 0, 51.7134, 2.41416, 17.2502, 0, 0, 0, 0, 0, 0, 54.3785, 2.41416, 10.2546, 0, 0, 0, 0, 0, 0, 44.8298, 2.41416, 1.86605 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=5]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0.0556648, 0.30659, -0.0107604, 0, 0, 0, 0, 0, 0, 0.275723, 0.564523, 16.1739, 0, 0, 0, 0, 0, 0, 1.32523, 0.456338, 30.9981, 0, 0, 0, 0, 0, 0, 1.25032, 2.0384, 34.3469, 0, 0, 0, 0, 0, 0, 0.908513, 2.01911, 57.504, 0, 0, 0, 0, 0, 0, -0.943584, 2.41416, 65.02, 0, 0, 0, 0, 0, 0, -8.17202, 2.41416, 72.6946, 0, 0, 0, 0, 0, 0, -10.2245, 2.41416, 78.406, 0, 0, 0, 0, 0, 0, -10.1353, 2.41416, 86.0806, 0, 0, 0, 0, 0, 0, -6.20874, 2.41416, 90.4534, 0, 0, 0, 0, 0, 0, 5.65453, 2.41416, 87.8817, 0, 0, 0, 0, 0, 0, 12.9722, 2.41416, 85.8291, 0, 0, 0, 0, 0, 0, 18.2374, 2.41416, 81.2779, 0, 0, 0, 0, 0, 0, 26.9829, 2.41416, 59.2356, 0, 0, 0, 0, 0, 0, 31.8911, 2.41416, 57.897, 0, 0, 0, 0, 0, 0, 37.6024, 2.41416, 64.59, 0, 0, 0, 0, 0, 0, 41.9752, 2.41416, 62.1806, 0, 0, 0, 0, 0, 0, 39.7028, 2.41416, 56.2723, 0, 0, 0, 0, 0, 0, 33.4974, 2.41416, 40.1383, 0, 0, 0, 0, 0, 0, 33.33, 2.41416, 30.19, 0, 0, 0, 0, 0, 0, 35.6502, 2.41416, 22.9615, 0, 0, 0, 0, 0, 0, 51.7134, 2.41416, 17.2502, 0, 0, 0, 0, 0, 0, 54.3785, 2.41416, 10.2546, 0, 0, 0, 0, 0, 0, 44.8298, 2.41416, 1.86605 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.600274, 0.0514096, 0.466523 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1.6745, 0.75511, 0.276244 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 4.94881, 1, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="game manager" type="Spatial" parent="."]
+script = ExtResource( 11 )
+
+[node name="AudioStreamPlayerMusique" type="AudioStreamPlayer" parent="game manager"]
+
+[node name="AudioStreamPlayerAnnonces" type="AudioStreamPlayer" parent="game manager"]
+
+[node name="TimerCacheAnnonce" type="Timer" parent="game manager"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Timer particules" type="Timer" parent="game manager"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Particles down" parent="game manager" instance=ExtResource( 43 )]
+
+[node name="Particles up" parent="game manager" instance=ExtResource( 44 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="test capture ecran" type="TextureRect" parent="CanvasLayer/Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.48987
+margin_top = 4.48987
+margin_right = 4.48987
+margin_bottom = 4.48987
+texture = ExtResource( 31 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="night effect" type="ColorRect" parent="CanvasLayer/Control"]
+visible = false
+material = ExtResource( 30 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.219608, 0.262745, 0.388235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 400.0
+margin_top = -200.0
+margin_right = -400.0
+margin_bottom = -25.0
+grow_vertical = 0
+alignment = 2
+script = ExtResource( 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer"]
+visible = false
+margin_top = 75.0
+margin_right = 1200.0
+margin_bottom = 175.0
+custom_constants/margin_right = 500
+custom_constants/margin_left = 500
+
+[node name="sons" type="Panel" parent="CanvasLayer/Control/VBoxContainer/MarginContainer"]
+margin_left = 500.0
+margin_right = 700.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/VBoxContainer/MarginContainer/sons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]GO ![/b] [/center]"
+tab_size = 1
+text = "GO ! "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actions" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer"]
+visible = false
+margin_top = 75.0
+margin_right = 1200.0
+margin_bottom = 175.0
+custom_constants/margin_right = 420
+custom_constants/margin_left = 420
+
+[node name="actions" type="Panel" parent="CanvasLayer/Control/VBoxContainer/actions"]
+margin_left = 420.0
+margin_right = 780.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/VBoxContainer/actions/actions"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Talk[/b] [/center]"
+tab_size = 1
+text = "Talk "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="annonces" type="Panel" parent="CanvasLayer/Control/VBoxContainer"]
+visible = false
+margin_top = 208.0
+margin_right = 1200.0
+margin_bottom = 308.0
+rect_min_size = Vector2( 800, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/VBoxContainer/annonces"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 19.0
+margin_right = -36.0
+margin_bottom = -19.0
+theme = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]  The race starts in one minute ! [/center]"
+tab_size = 1
+text = "  The race starts in one minute ! "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dialogues" type="Panel" parent="CanvasLayer/Control/VBoxContainer"]
+visible = false
+margin_top = 312.0
+margin_right = 1200.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 1200, 200 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/VBoxContainer/dialogues"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 19.0
+margin_right = -36.0
+margin_bottom = -19.0
+theme = ExtResource( 12 )
+bbcode_enabled = true
+bbcode_text = "You’re here again to ask to start the race facing on the side ? Why do you want it so much ? You’re so desperate for attention ?
+you want it so much ? You’re so desperate for attention ?"
+tab_size = 1
+text = "You’re here again to ask to start the race facing on the side ? Why do you want it so much ? You’re so desperate for attention ?
+you want it so much ? You’re so desperate for attention ?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Control/VBoxContainer/dialogues"]
+one_shot = true
+
+[node name="slogans container" type="Control" parent="CanvasLayer/Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan1" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 698.838
+margin_top = 930.055
+margin_right = 1298.84
+margin_bottom = 1030.05
+rect_min_size = Vector2( 600, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Stop the race !!![/b] [/center]"
+tab_size = 1
+text = "Stop the race !!! "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan2" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 684.583
+margin_top = 51.6287
+margin_right = 1284.58
+margin_bottom = 151.629
+rect_min_size = Vector2( 600, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Be crab ! do Crimes ![/b] [/center]"
+tab_size = 1
+text = "Be crab ! do Crimes ! "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan3" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 110.845
+margin_top = 785.729
+margin_right = 810.845
+margin_bottom = 885.729
+rect_min_size = Vector2( 700, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Stop the fish hegemony !![/b] [/center]"
+tab_size = 1
+text = "Stop the fish hegemony !! "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan4" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 57.3906
+margin_top = 210.209
+margin_right = 807.391
+margin_bottom = 310.209
+rect_min_size = Vector2( 750, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]The race is a social construct [/b] [/center]"
+tab_size = 1
+text = "The race is a social construct  "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan5" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 1220.9
+margin_top = 750.093
+margin_right = 1720.9
+margin_bottom = 850.093
+rect_min_size = Vector2( 500, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Unrace your mind[/b] [/center]"
+tab_size = 1
+text = "Unrace your mind "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan6" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 1179.92
+margin_top = 231.59
+margin_right = 1779.92
+margin_bottom = 331.59
+rect_min_size = Vector2( 600, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Stop the race !!![/b] [/center]"
+tab_size = 1
+text = "Stop the race !!! "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan7" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 360.296
+margin_top = 368.788
+margin_right = 960.296
+margin_bottom = 548.789
+rect_min_size = Vector2( 600, 180 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]We’re crab, we’re crip, we wont disapear[/b] [/center]"
+tab_size = 1
+text = "We’re crab, we’re crip, we wont disapear "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slogan8" type="Panel" parent="CanvasLayer/Control/slogans container"]
+visible = false
+margin_left = 782.582
+margin_top = 596.859
+margin_right = 1582.58
+margin_bottom = 696.859
+rect_min_size = Vector2( 800, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/slogans container/slogan8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = 16.0
+margin_right = -36.0
+margin_bottom = -16.0
+theme = ExtResource( 12 )
+custom_fonts/bold_font = ExtResource( 14 )
+custom_fonts/normal_font = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 0.968627, 0.654902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Radical crips united ! Join us ![/b] [/center]"
+tab_size = 1
+text = "Radical crips united ! Join us ! "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="noir" type="ColorRect" parent="CanvasLayer/Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+
+[node name="menu in game" type="VBoxContainer" parent="CanvasLayer/Control"]
+pause_mode = 2
+margin_left = 6.59009
+margin_top = 11.3787
+margin_right = 401.59
+margin_bottom = 307.379
+custom_constants/separation = 10
+script = ExtResource( 61 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resume" parent="CanvasLayer/Control/menu in game" instance=ExtResource( 59 )]
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/menu in game/resume"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 12 )
+custom_fonts/font = ExtResource( 60 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Resume"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" parent="CanvasLayer/Control/menu in game" instance=ExtResource( 59 )]
+margin_top = 102.0
+margin_bottom = 194.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/menu in game/menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 12 )
+custom_fonts/font = ExtResource( 60 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" parent="CanvasLayer/Control/menu in game" instance=ExtResource( 59 )]
+margin_top = 204.0
+margin_bottom = 296.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/menu in game/quit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 12 )
+custom_fonts/font = ExtResource( 60 )
+custom_colors/font_color = Color( 0.0823529, 0.141176, 0.152941, 1 )
+text = "Quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 17 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.133824, 0.794397, -0.592473, -0.00102115, 0.597961, 0.801525, 0.991005, -0.106659, 0.080833, -6.77298, 6.66996, 0 )
+shadow_enabled = true
+
+[node name="crab" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.640222, -0.0108975, 0.0343513 )
+script = ExtResource( 3 )
+
+[node name="baton actif" parent="crab" instance=ExtResource( 48 )]
+visible = false
+
+[node name="baton range" parent="crab" instance=ExtResource( 48 )]
+transform = Transform( 0.323009, -0.943048, -0.0795316, 0.391528, 0.0566498, 0.918421, -0.86161, -0.327797, 0.387528, 0.0990099, -0.0477034, 0.0211754 )
+visible = false
+
+[node name="Spatial" type="Spatial" parent="crab"]
+
+[node name="Camera" type="Camera" parent="crab/Spatial"]
+transform = Transform( -1, -1.42109e-14, -3.25841e-07, -3.70332e-08, 0.99352, 0.113654, 3.2373e-07, 0.113654, -0.99352, 0, 0.83, -1.469 )
+
+[node name="cam profil" type="Spatial" parent="crab"]
+transform = Transform( -1, -1.42109e-14, -3.25841e-07, -3.70332e-08, 0.99352, 0.113654, 3.2373e-07, 0.113654, -0.99352, 0, 0.83, -1.469 )
+
+[node name="cam dos" type="Spatial" parent="crab"]
+transform = Transform( -1.62921e-07, 0.113654, -0.99352, 0, 0.99352, 0.113654, 1, 1.85166e-08, -1.61865e-07, -1.469, 0.83, 0 )
+
+[node name="start pos" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.640222, -0.0108975, 0.0343513 )
+
+[node name="groupe trouve baton" type="Spatial" parent="."]
+
+[node name="baton a ramasser" type="StaticBody" parent="groupe trouve baton"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.77144, 0.31048, 0 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="baton" parent="groupe trouve baton/baton a ramasser" instance=ExtResource( 48 )]
+transform = Transform( 0.939322, -0.343037, 8.74807e-10, 0.0138085, 0.0378111, 0.999189, -0.342759, -0.938561, 0.0402536, 0.215345, -0.437731, 0.105375 )
+
+[node name="feedback" parent="groupe trouve baton/baton a ramasser" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.227448, 0.0645433, 0.00325546 )
+
+[node name="CollisionShape" type="CollisionShape" parent="groupe trouve baton/baton a ramasser"]
+transform = Transform( 0.0255534, 0, 0.0119052, 0, 0.308646, 0, -0.011272, 0, 0.0269888, 0.219819, -0.296792, -0.00770314 )
+shape = SubResource( 2 )
+
+[node name="Area" type="Area" parent="groupe trouve baton/baton a ramasser"]
+transform = Transform( 0.0822673, 0, 0, 0, 0.308646, 0, 0, 0, 0.0868886, 0.230799, -0.0497763, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="groupe trouve baton/baton a ramasser/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526773, 0 )
+shape = SubResource( 3 )
+
+[node name="decor" type="Spatial" parent="."]
+
+[node name="sol" parent="decor" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000314415, 0 )
+
+[node name="sol2" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0 )
+
+[node name="sol3" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0 )
+
+[node name="sol4" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30 )
+
+[node name="sol5" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 30 )
+
+[node name="sol1" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30 )
+
+[node name="sol6" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -30 )
+
+[node name="sol7" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -30 )
+
+[node name="sol8" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30 )
+
+[node name="sol9" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2, 30, 0, 75 )
+
+[node name="sol10" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2, -30, 0, 75 )
+
+[node name="sol11" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 75 )
+
+[node name="sol12" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 0 )
+
+[node name="sol13" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 30 )
+
+[node name="sol14" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -30 )
+
+[node name="sol15" parent="decor/sol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 75, 0, 75 )
+
+[node name="centre de controle" parent="decor" instance=ExtResource( 45 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 9.27434, 0, 9.04481 )
+
+[node name="rocher cube2" parent="decor/centre de controle" instance=ExtResource( 4 )]
+transform = Transform( -0.742034, 0, -0.670362, 0, 1, 0, 0.670362, 0, -0.742034, 3.42944, 9.53674e-07, -6.10011 )
+
+[node name="rocher haut grand2" parent="decor/centre de controle" instance=ExtResource( 21 )]
+transform = Transform( 0.323059, 0, 0.946379, 0, 1, 0, -0.946379, 0, 0.323059, -0.506911, 0, -8.06729 )
+
+[node name="rocher penche2" parent="decor/centre de controle" instance=ExtResource( 23 )]
+transform = Transform( -0.823701, 0, -0.567024, 0, 1, 0, 0.567024, 0, -0.823701, 3.56611, 1.90735e-06, -10.8782 )
+
+[node name="PNJ  1" type="Spatial" parent="decor/centre de controle"]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, -0.400708, 0.430883, -0.189036 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+dialogues = [ "You’re here again to ask to start the race facing on the side ? Why do you want it so much ? You’re so desperate for attention ?", "Everyone has always started facing the race, how could we trust someone who does’nt even look toward his future ?", "Do you have something to hide ? In a baby we could tolerate it, but you’re a grown up now ! Only lyers and bad people don’t look in front of them." ]
+
+[node name="lieu jaune v1" parent="decor/centre de controle/PNJ  1" instance=ExtResource( 32 )]
+transform = Transform( -1.62921e-07, 0.254146, -0.967166, 0, 0.967167, 0.254146, 1, 4.14057e-08, -1.57571e-07, -0.322647, 0.0628815, -0.163667 )
+
+[node name="Area" type="Area" parent="decor/centre de controle/PNJ  1"]
+transform = Transform( 0.109755, 0, 0, 0, 0.308646, 0, 0, 0, 0.0989966, 0, -0.0497763, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="decor/centre de controle/PNJ  1/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526773, 0 )
+shape = SubResource( 3 )
+
+[node name="feedback pnj" parent="decor/centre de controle/PNJ  1" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24235, 0.777885, -0.151982 )
+
+[node name="centre de controle 2" parent="decor" instance=ExtResource( 46 )]
+
+[node name="PNJ  2" type="Spatial" parent="decor/centre de controle 2"]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, -0.500381, 0.430883, -0.18901 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+dialogues = [ "Still asking for a special treatment ? Who do you think you are ?", "What do you mean it’s a problem in the teleportation software ? It’s always been this way, facing one’s future is the way nature wants us to be. ", "Do you think it will improve your results ? What about really trying and stoping to look for excuses ?" ]
+
+[node name="grondin" parent="decor/centre de controle 2/PNJ  2" instance=ExtResource( 28 )]
+transform = Transform( -0.926167, 0.377114, 3.89414e-07, 0.377114, 0.926168, 0, -3.60663e-07, 1.46854e-07, -1, -0.262949, 0.11378, -0.231325 )
+
+[node name="Area" type="Area" parent="decor/centre de controle 2/PNJ  2"]
+transform = Transform( 0.109755, 0, 0, 0, 0.308646, 0, 0, 0, 0.0989966, 0, -0.0497763, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="decor/centre de controle 2/PNJ  2/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526773, 0 )
+shape = SubResource( 3 )
+
+[node name="feedback pnj" parent="decor/centre de controle 2/PNJ  2" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410559, 0.777885, -0.228087 )
+
+[node name="rochers bloque debut" type="Spatial" parent="decor"]
+
+[node name="rocher deux bosses2" parent="decor/rochers bloque debut" instance=ExtResource( 18 )]
+transform = Transform( -0.703496, 0, -0.705636, 0, 0.996408, 0, 0.705636, 0, -0.703496, -6.3708, 0, -10.1887 )
+
+[node name="rocher haut grand2" parent="decor/rochers bloque debut" instance=ExtResource( 21 )]
+transform = Transform( -1.24151, 0, 0.349159, 0, 1.28967, 0, -0.349159, 0, -1.24151, -9.289, 0, -5.145 )
+
+[node name="rocher rond haut2" parent="decor/rochers bloque debut" instance=ExtResource( 25 )]
+transform = Transform( 0.703735, 0, -4.36915, 0, 4.42546, 0, 4.36915, 0, 0.703735, -9.77562, 0, -10.2286 )
+
+[node name="barriere petite" parent="decor/rochers bloque debut" instance=ExtResource( 41 )]
+transform = Transform( 0.225969, 0, 0.971924, 0, 1, 0, -0.933402, 0, 0.235295, -9.17056, 0, -13.799 )
+
+[node name="rocher deux bosses2 barriere" parent="decor" instance=ExtResource( 18 )]
+transform = Transform( 1.744, 0, -1.07851, 0, 2.05054, 0, 1.07851, 0, 1.744, 8.18574, 0, -21.249 )
+
+[node name="rocher rond haut2" parent="decor/rocher deux bosses2 barriere" instance=ExtResource( 25 )]
+transform = Transform( 0.487345, 0, 0.301378, 0, 0.573005, 0, -0.301378, 0, 0.487345, 1.54937, 0, -1.13203 )
+
+[node name="rocher rond haut3" parent="decor" instance=ExtResource( 25 )]
+transform = Transform( -1.86395, 0, 0.977348, 0, 2.10464, 0, -0.977348, 0, -1.86395, 20.6932, -9.53674e-07, 9.5569 )
+
+[node name="rocher deux bosses3" parent="decor/rocher rond haut3" instance=ExtResource( 18 )]
+transform = Transform( -0.472639, 0, 0.0487008, 0, 0.475141, 0, -0.0487008, 0, -0.472639, 1.04751, 4.5313e-07, -0.786915 )
+
+[node name="rocher rebord2" parent="decor/rocher rond haut3" instance=ExtResource( 22 )]
+transform = Transform( -0.193999, 0, 0.266576, 0, 0.329694, 0, -0.266576, 0, -0.193999, 0.993727, 0, 0.385682 )
+
+[node name="rochers modeles" type="Spatial" parent="decor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2509, 0, -5.43773 )
+
+[node name="rocher cube" parent="decor/rochers modeles" instance=ExtResource( 4 )]
+transform = Transform( 0.742034, 0, 0.670362, 0, 1, 0, -0.670362, 0, 0.742034, -4.25869, 9.53674e-07, 3.78471 )
+
+[node name="rocher penche" parent="decor/rochers modeles" instance=ExtResource( 23 )]
+transform = Transform( 0.823701, 0, 0.567025, 0, 1, 0, -0.567025, 0, 0.823701, -3.60848, 1.90735e-06, -4.04961 )
+
+[node name="rocher rond bosselé" parent="decor/rochers modeles" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.215408, 0, -2.54563 )
+
+[node name="rocher rond 1" parent="decor/rochers modeles" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.611439, 0, 0.955941 )
+
+[node name="rocher rebord" parent="decor/rochers modeles" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.67831, 0, -0.854305 )
+
+[node name="rocher petit" parent="decor/rochers modeles" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28983, 0, 1.91958 )
+
+[node name="rocher deux bosses" parent="decor/rochers modeles" instance=ExtResource( 18 )]
+transform = Transform( 0.833375, 0, -0.552708, 0, 1, 0, 0.552708, 0, 0.833375, 4.61537, -1.90735e-06, 7.19196 )
+
+[node name="rocher haut grand" parent="decor/rochers modeles" instance=ExtResource( 21 )]
+transform = Transform( 0.52057, 0, -0.198079, 0, 0.556982, 0, 0.198079, 0, 0.52057, 5.30054, 0, 11.0296 )
+
+[node name="rocher rond haut" parent="decor/rochers modeles" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25119, 0, -0.163364 )
+
+[node name="rochers bout village" type="Spatial" parent="decor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.4731, -3.8147e-06, 17.4791 )
+
+[node name="rocher petit2" parent="decor/rochers bout village" instance=ExtResource( 24 )]
+transform = Transform( -0.772162, 0, 3.20815, 0, 3.27305, 0, -3.20815, 0, -0.772162, -1.10662, 3.8147e-06, 6.49284 )
+
+[node name="rocher cube2" parent="decor/rochers bout village" instance=ExtResource( 4 )]
+transform = Transform( 0.179506, 0, 0.983757, 0, 1, 0, -0.983757, 0, 0.179506, -0.0347309, 4.76837e-06, 10.1154 )
+
+[node name="rocher rond bosselé2" parent="decor/rochers bout village" instance=ExtResource( 26 )]
+transform = Transform( 1.08945, 0, -0.60332, 0, 1.24535, 0, 0.60332, 0, 1.08945, 2.21358, 3.8147e-06, 5.60417 )
+
+[node name="PNJS" type="Spatial" parent="."]
+
+[node name="bernard lhermite 3" parent="PNJS" instance=ExtResource( 51 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1138, 0.027811, 0.637884 )
+
+[node name="PNJ  vieux" type="Spatial" parent="PNJS"]
+transform = Transform( 0.990068, 0, 0.14059, 0, 1, 0, -0.14059, 0, 0.990068, -1.21135, 0.430883, -6.38117 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+dialogues = [ "You see all those medals ? That’s because I’ve been in the top for all the last years of my runing life.", "Oh I can see where you're going, you think I was priviledged ! But no, I was from a bad runner family, my parents always were in the last 10 %, almost like you. ", "But hey, I trained hard and here I am ! ", "Everything is possible when you do your best. You really should stop complaining and go back to the race" ]
+
+[node name="lieu jaune vert" parent="PNJS/PNJ  vieux" instance=ExtResource( 54 )]
+transform = Transform( 0.783454, 0.254146, -0.567105, -0.205871, 0.967167, 0.14902, 0.586358, 2.23517e-08, 0.810051, -0.00647771, -0.0201995, 0.00730419 )
+
+[node name="Area" type="Area" parent="PNJS/PNJ  vieux"]
+transform = Transform( 0.125579, 0, 5.58794e-09, 0, 0.308646, 0, -5.58794e-09, 0, 0.117496, 0.255947, -0.0497763, -0.0172529 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PNJS/PNJ  vieux/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526773, 0 )
+shape = SubResource( 3 )
+
+[node name="feedback pnj" parent="PNJS/PNJ  vieux" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0604151, 0.777885, -0.0479112 )
+
+[node name="centre de controle2" parent="PNJS" instance=ExtResource( 45 )]
+transform = Transform( -0.0278515, 0, -0.999612, 0, 1, 0, 0.999612, 0, -0.0278515, -3.35649, 0, -5.6901 )
+
+[node name="PNJ  1" type="Spatial" parent="PNJS/centre de controle2"]
+transform = Transform( -1, 0, 3.29688e-07, 0, 1, 0, -3.29688e-07, 0, -1, -0.0240521, 0.430883, -0.0575466 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+dialogues = [ "You want to look at your best times ?", "One minut ...", "Wow, you don’t have a single time ??? ", "You never made it to the end of the race in your entire life ???", "Girl, they told me you were lasy but i didn’t imagine it was that much. Aren’t you ashamed ? ", "We feed you and you spend all your day sleeping ?" ]
+
+[node name="grondin bleu" parent="PNJS/centre de controle2/PNJ  1" instance=ExtResource( 53 )]
+transform = Transform( -0.918471, 0.24135, 3.03611e-07, 0.24135, 0.918472, -3.9321e-08, -2.96161e-07, 4.19095e-08, -0.949652, 0.210672, 0.16348, -0.0321789 )
+
+[node name="Area" type="Area" parent="PNJS/centre de controle2/PNJ  1"]
+transform = Transform( 0.130517, 0, 1.39698e-09, 0, 0.308646, 0, -2.32831e-10, 0, 0.130752, 0.132162, -0.0497763, -0.0969956 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PNJS/centre de controle2/PNJ  1/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526773, 0 )
+shape = SubResource( 3 )
+
+[node name="feedback pnj" parent="PNJS/centre de controle2/PNJ  1" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, -3.72529e-09, 0, 1, 0, 3.72529e-09, 0, 1, -0.010951, 0.777885, -0.0367291 )
+
+[node name="centre de controle 2" parent="PNJS/centre de controle2" instance=ExtResource( 46 )]
+transform = Transform( 0.999999, 0, -3.72529e-09, 0, 1, 0, 3.72529e-09, 0, 0.999999, -4.0591, 0, -0.088773 )
+
+[node name="course" type="Spatial" parent="."]
+
+[node name="Timer" type="Timer" parent="course"]
+script = ExtResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="course/Timer"]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="course/Timer"]
+
+[node name="course debut" parent="course" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.14437 )
+
+[node name="feu rouge" parent="course/course debut" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.30425, -0.360399, -2.56984 )
+
+[node name="ligne droite debut" parent="course" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.2 )
+
+[node name="tremplin etroit" parent="course/ligne droite debut" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255882, 0, 4.82728 )
+
+[node name="ligne droite3" parent="course/ligne droite debut" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.8592 )
+
+[node name="tremplin etroit2" parent="course/ligne droite debut" instance=ExtResource( 15 )]
+transform = Transform( 0.938854, 0, -0.344315, 0, 1, 0, 0.344315, 0, 0.938854, -9.92452, 0, 51.6594 )
+
+[node name="tremplin etroit3" parent="course/ligne droite debut" instance=ExtResource( 15 )]
+transform = Transform( -0.34687, 0, 0.937913, 0, 1, 0, -0.937913, 0, -0.34687, 7.285, 0, 64.1099 )
+
+[node name="virage smooth 60" parent="course/ligne droite debut" instance=ExtResource( 40 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96885, 0, 39.4703 )
+
+[node name="virage smooth 61" parent="course/ligne droite debut" instance=ExtResource( 40 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -9.02084, 0, 51.5746 )
+
+[node name="virage smooth 30" parent="course/ligne droite debut" instance=ExtResource( 47 )]
+transform = Transform( -0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, -0.939693, -9.88671, 0, 63.9364 )
+
+[node name="ligne droite2" parent="course/ligne droite debut" instance=ExtResource( 10 )]
+transform = Transform( 0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, 0.34202, 8.00988, 0, 62.1455 )
+
+[node name="virage d 90" parent="course/ligne droite debut" instance=ExtResource( 19 )]
+transform = Transform( 0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, 0.34202, -4.07543, 0, 66.6005 )
+
+[node name="virage d 60" parent="course/ligne droite debut" instance=ExtResource( 36 )]
+transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 17.394, 0, 56.916 )
+
+[node name="ligne droite4" parent="course/ligne droite debut" instance=ExtResource( 10 )]
+transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, 21.805, 0, 44.8285 )
+
+[node name="ligne droite virages hard" parent="course" instance=ExtResource( 10 )]
+transform = Transform( 0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 36.7988, 0, 46.1204 )
+
+[node name="virage d 60" parent="course/ligne droite virages hard" instance=ExtResource( 36 )]
+transform = Transform( -0.766045, 0, 0.642787, 0, 1, 0, -0.642787, 0, -0.766045, -17.0663, 0, 10.0215 )
+
+[node name="tremplin etroit4" parent="course/ligne droite virages hard" instance=ExtResource( 15 )]
+transform = Transform( -0.999733, 0, 0.0231235, 0, 1, 0, -0.0231235, 0, -0.999733, -2.02995, 0, 8.2148 )
+
+[node name="virage d 90" parent="course/ligne droite virages hard" instance=ExtResource( 19 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -13.5536, 0, 8.33456 )
+
+[node name="virage d 180" parent="course/ligne droite virages hard" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.164, 0, 12.7785 )
+
+[node name="virage smooth 90" parent="course/ligne droite virages hard" instance=ExtResource( 39 )]
+transform = Transform( -1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, 0.0562363, 0, -7.09941 )
+
+[node name="tremplin etroit5" parent="course/ligne droite virages hard" instance=ExtResource( 15 )]
+transform = Transform( -0.833471, 0, 0.552563, 0, 1, 0, -0.552563, 0, -0.833471, 2.63102, 0, -18.4523 )
+
+[node name="virage d 30" parent="course/ligne droite virages hard" instance=ExtResource( 38 )]
+transform = Transform( -2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, 16.096, 0, -24.121 )
+
+[node name="virage d 181" parent="course/ligne droite virages hard" instance=ExtResource( 20 )]
+transform = Transform( 0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 25.0313, 0, -30.1868 )
+
+[node name="tremplin etroit6" parent="course/ligne droite virages hard" instance=ExtResource( 15 )]
+transform = Transform( -0.897281, 0, -0.441459, 0, 1, 0, 0.441459, 0, -0.897281, 22.2418, 0, -30.1807 )
+
+[node name="virage d 61" parent="course/ligne droite virages hard" instance=ExtResource( 36 )]
+transform = Transform( -0.64579, 0, -0.763514, 0, 1, 0, 0.763514, 0, -0.64579, 24.9719, -3.8147e-06, -30.0664 )
+
+[node name="virage d 31" parent="course/ligne droite virages hard" instance=ExtResource( 38 )]
+transform = Transform( 0.766045, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766045, 22.4259, 0, -36.489 )
+
+[node name="virage d 182" parent="course/ligne droite virages hard" instance=ExtResource( 20 )]
+transform = Transform( -0.780266, 0, -0.625447, 0, 1, 0, 0.625447, 0, -0.780266, 22.3876, 0, -36.3317 )
+
+[node name="virage d 160" parent="course/ligne droite virages hard" instance=ExtResource( 37 )]
+transform = Transform( 0.988438, 0, 0.151623, 0, 1, 0, -0.151623, 0, 0.988438, 37.5363, 0, -45.6403 )
+
+[node name="ligne droite milieu" parent="course" instance=ExtResource( 10 )]
+transform = Transform( 0.87697, 0, 0.480545, 0, 1, 0, -0.480545, 0, 0.87697, 50.3373, 0, -20.7821 )
+
+[node name="virage smooth 60" parent="course/ligne droite milieu" instance=ExtResource( 40 )]
+transform = Transform( 0.642787, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642787, -2.40993, 0, -13.6991 )
+
+[node name="virage bloque bas" parent="course" instance=ExtResource( 35 )]
+transform = Transform( 0.99997, 0, -0.00771432, 0, 1, 0, 0.00771432, 0, 0.99997, 6.628, 0, -36.357 )
+
+[node name="ligne droite2" parent="course/virage bloque bas" instance=ExtResource( 10 )]
+transform = Transform( 0.642788, 0, -0.766045, 0, 1, 0, 0.766045, 0, 0.642788, 11.473, 0, -11.8251 )
+
+[node name="virage d 60" parent="course/virage bloque bas" instance=ExtResource( 36 )]
+transform = Transform( -1, 0, 3.25963e-07, 0, 1, 0, -3.25963e-07, 0, -1, 0.00115395, 0, 0.0215874 )
+
+[node name="virage d 90" parent="course/virage bloque bas" instance=ExtResource( 19 )]
+transform = Transform( -0.502266, 0, -0.864714, 0, 1, 0, 0.864714, 0, -0.502266, -24.3873, 0, 15.1074 )
+
+[node name="ligne droite" parent="course/virage bloque bas" instance=ExtResource( 10 )]
+transform = Transform( 0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, -19.5785, 0, -2.26764 )
+
+[node name="tremplin etroit" parent="course/virage bloque bas/ligne droite" instance=ExtResource( 15 )]
+transform = Transform( -0.999591, 0, 0.0286369, 0, 1, 0, -0.0286369, 0, -0.999591, 1.64891, 0, 6.77537 )
+
+[node name="tremplin etroit2" parent="course/virage bloque bas/ligne droite" instance=ExtResource( 15 )]
+transform = Transform( -0.999591, 0, 0.028637, 0, 1, 0, -0.028637, 0, -0.999591, -2.04127, 0, -3.47401 )
+
+[node name="virage d 160" parent="course/virage bloque bas" instance=ExtResource( 37 )]
+transform = Transform( -0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, -0.5, -22.3789, 0, -14.6317 )
+visible = false
+
+[node name="virage d 30" parent="course/virage bloque bas" instance=ExtResource( 38 )]
+transform = Transform( -0.173649, 0, 0.984808, 0, 1, 0, -0.984808, 0, -0.173649, -20.9124, 0, -15.2107 )
+visible = false
+
+[node name="virage d 91" parent="course/virage bloque bas" instance=ExtResource( 19 )]
+transform = Transform( 0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, -17.8419, 0, -14.6667 )
+
+[node name="virage d 92" parent="course/virage bloque bas" instance=ExtResource( 19 )]
+transform = Transform( -0.643349, 0, 0.765572, 0, 1, 0, -0.765572, 0, -0.643349, 16.8816, 0, -16.3687 )
+
+[node name="virage d 180" parent="course" instance=ExtResource( 20 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 40.8774, 0, -15.4808 )
+
+[node name="crevasse fin" parent="course" instance=ExtResource( 34 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -88.3758, 0, -47.8769 )
+
+[node name="virage d 60" parent="course/crevasse fin" instance=ExtResource( 36 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 16.7276, 0, 42.2601 )
+
+[node name="virage smooth 90" parent="course/crevasse fin" instance=ExtResource( 39 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 16.7842, 0, 42.0048 )
+
+[node name="zone arrete temps" type="Area" parent="course"]
+transform = Transform( -0.999977, 0, 0.00680647, 0, 1, 0, -0.00680647, 0, -0.999977, 43.758, 6.21897, -1.36922 )
+script = ExtResource( 42 )
+stop_compteur = true
+
+[node name="CollisionShape" type="CollisionShape" parent="course/zone arrete temps"]
+shape = SubResource( 4 )
+
+[node name="zone relance temps" type="Area" parent="course"]
+transform = Transform( -0.362893, 0, -0.931831, 0, 1, 0, 0.931831, 0, -0.362893, 49.5378, 6.21897, 9.22703 )
+script = ExtResource( 42 )
+relance_temps = true
+
+[node name="CollisionShape" type="CollisionShape" parent="course/zone relance temps"]
+shape = SubResource( 4 )
+
+[node name="poissons course" type="Spatial" parent="."]
+
+[node name="Path5" type="Path" parent="poissons course"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.949448, -2.24389, 0 )
+curve = SubResource( 9 )
+
+[node name="l v" type="PathFollow" parent="poissons course/Path5" groups=[
+"poissons",
+]]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -4.62389, 2.42946, -0.028717 )
+rotation_mode = 2
+script = ExtResource( 16 )
+vitesse = 5.5
+
+[node name="lieu jaune vert2" parent="poissons course/Path5/l v" instance=ExtResource( 54 )]
+transform = Transform( 0.960805, 0, 0, 0, 0.960806, 0, 0, 0, 0.960805, 0.0297995, 0.527821, 0.0287171 )
+
+[node name="Path4" type="Path" parent="poissons course"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.949448, -2.24389, 0 )
+curve = SubResource( 9 )
+
+[node name="g b" type="PathFollow" parent="poissons course/Path4" groups=[
+"poissons",
+]]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -2.82614, 2.42946, -0.028717 )
+rotation_mode = 2
+script = ExtResource( 16 )
+vitesse = 4.5
+
+[node name="grondin bleu" parent="poissons course/Path4/g b" instance=ExtResource( 53 )]
+transform = Transform( -1.91003e-07, 0, -1.17236, 0, 1.17236, 0, 1.17236, 0, -1.91003e-07, 0.0108814, 0.559422, -0.203968 )
+
+[node name="Path3" type="Path" parent="poissons course"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.949448, -2.24389, 0 )
+curve = SubResource( 9 )
+
+[node name="bh1" type="PathFollow" parent="poissons course/Path3" groups=[
+"poissons",
+]]
+transform = Transform( 0.402619, -0.000792415, 0.915366, -0.00249971, 0.999995, 0.00196516, -0.915363, -0.00307936, 0.402615, -1.28632, 2.42946, -0.028717 )
+rotation_mode = 2
+script = ExtResource( 16 )
+vitesse = 0.5
+
+[node name="bernard lhermite 1" parent="poissons course/Path3/bh1" instance=ExtResource( 50 )]
+transform = Transform( -0.40262, -0.00249971, 0.915365, 0.000792414, 0.999995, 0.00307936, -0.915368, 0.00196516, -0.402616, -0.000681281, -0.185619, 0.0252469 )
+
+[node name="Path" type="Path" parent="poissons course"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.949448, 0.481131, 0 )
+curve = SubResource( 5 )
+
+[node name="poisson1" type="PathFollow" parent="poissons course/Path" groups=[
+"poissons",
+]]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0.232257, 0 )
+rotation_mode = 2
+script = ExtResource( 16 )
+
+[node name="lieu jaune" parent="poissons course/Path/poisson1" instance=ExtResource( 9 )]
+
+[node name="Path2" type="Path" parent="poissons course"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.935947, 0.481131, 0 )
+curve = SubResource( 5 )
+
+[node name="poisson1" type="PathFollow" parent="poissons course/Path2" groups=[
+"poissons",
+]]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 2.98016, 0.232257, 0 )
+rotation_mode = 2
+script = ExtResource( 16 )
+
+[node name="grondin" parent="poissons course/Path2/poisson1" instance=ExtResource( 28 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -0.0863165, 0.0316012, -0.249305 )
+
+[node name="Path6" type="Path" parent="poissons course"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.949448, 0.481131, 0 )
+curve = SubResource( 5 )
+
+[node name="poisson1" type="PathFollow" parent="poissons course/Path6" groups=[
+"poissons",
+]]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 4.33149, 0.232257, 0 )
+rotation_mode = 2
+script = ExtResource( 16 )
+vitesse = 4.8
+
+[node name="lieu jaune vert" parent="poissons course/Path6/poisson1" instance=ExtResource( 54 )]
+transform = Transform( 0.699363, 0, 0, 0, 0.699363, 0, 0, 0, 0.699363, -0.0197654, 5.96046e-08, 0 )
+
+[node name="Path7" type="Path" parent="poissons course"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.949448, 0.481131, 0 )
+curve = SubResource( 5 )
+
+[node name="bh 2" type="PathFollow" parent="poissons course/Path7" groups=[
+"poissons",
+]]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 5.35705, 0.232257, 0 )
+rotation_mode = 2
+script = ExtResource( 16 )
+vitesse = 0.4
+
+[node name="bernard lhermite 2 orange" parent="poissons course/Path7/bh 2" instance=ExtResource( 52 )]
+transform = Transform( -1, 0, -3.25842e-07, 0, 1, 0, 3.25842e-07, 0, -1, -0.00946999, -0.713388, 0.0135753 )
+
+[node name="zone has tried race" type="Area" parent="."]
+transform = Transform( -0.887719, 0, 0.460386, 0, 1, 0, -0.460386, 0, -0.887719, 22.3452, 6.21897, 68.5941 )
+script = ExtResource( 42 )
+has_tried_race = true
+
+[node name="CollisionShape" type="CollisionShape" parent="zone has tried race"]
+shape = SubResource( 4 )
+
+[node name="Zone texte it\'s useless" parent="." instance=ExtResource( 49 )]
+transform = Transform( 0.56488, 0, 0.825173, 0, 1, 0, -0.825173, 0, 0.56488, 33.0191, 0, 61.3313 )
+texte = [ "It’s useless, I won’t make it to the end before dark.", "I should go back to chill in the rocks outside the race." ]
+must_have_stick = false
+
+[node name="zone declenche nuit" type="Area" parent="."]
+transform = Transform( -0.959087, 0, -0.283112, 0, 1, 0, 0.283112, 0, -0.959087, 37.4101, 0, 45.3306 )
+script = ExtResource( 42 )
+declenche_nuit = true
+
+[node name="CollisionShape" type="CollisionShape" parent="zone declenche nuit"]
+shape = SubResource( 4 )
+
+[node name="zone declenche annonce" type="Area" parent="."]
+transform = Transform( -0.985479, 0, 0.169797, 0, 1, 0, -0.169797, 0, -0.985479, 53.0006, 0, 14.3197 )
+script = ExtResource( 42 )
+declenche_annonce = true
+
+[node name="CollisionShape" type="CollisionShape" parent="zone declenche annonce"]
+shape = SubResource( 4 )
+
+[node name="Zone texte less fun" parent="." instance=ExtResource( 49 )]
+transform = Transform( -0.999878, 0, -0.0155854, 0, 1, 0, 0.0155854, 0, -0.999878, 41.6571, 0, 57.6065 )
+texte = [ "It’s way less fun than it was suposed to be. Even with that stick this is so fucking hard." ]
+
+[node name="Zone texte boo" type="Area" parent="."]
+transform = Transform( 0.984239, 0, -0.176844, 0, 1, 0, 0.176844, 0, 0.984239, 33.2794, 0, 26.4957 )
+script = ExtResource( 58 )
+__meta__ = {
+"_edit_group_": true
+}
+texte = [ "Fuck you ! Stop boooing me.", "I’d like to see you try if you lived in a world designed for somebody else than you." ]
+
+[node name="Timer texte" type="Timer" parent="Zone texte boo"]
+wait_time = 3.0
+one_shot = true
+
+[node name="CollisionShape" type="CollisionShape" parent="Zone texte boo"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.485292, 0 )
+shape = SubResource( 8 )
+
+[node name="Zone texte virage" parent="." instance=ExtResource( 49 )]
+transform = Transform( 0.800072, 0, -0.599904, 0, 1, 0, 0.599904, 0, 0.800072, 45.1072, 0, -2.44933 )
+texte = [ "Who designed this race ??? It was surely a fucking fish. ", "They didn’t even think crabs exist to construct such tights bends." ]
+
+[node name="Zone texte race to live" parent="." instance=ExtResource( 49 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1654, 0, -9.7462 )
+texte = [ "‘Race to live and live to race’ they say … ‘Racing is the natural order of things’.", "What’s the use of all this ??" ]
+
+[node name="Zone texte fin" parent="." instance=ExtResource( 49 )]
+transform = Transform( -1.62921e-07, 0, 1.40654, 0, 1, 0, -1, 0, -2.29154e-07, -83.0539, 0, -48.1544 )
+lance_fin = true
+
+[node name="Zone texte training yard" parent="." instance=ExtResource( 49 )]
+transform = Transform( 1.59023, 0, -0.172187, 0, 1, 0, 0.277969, 0, 0.985064, 19.1477, 0, -20.7465 )
+texte = [ "It the training yard for young fishes here. I don’t want to see that, thanks." ]
+temps_texte = 4
+
+[node name="barriere grande" parent="Zone texte training yard" instance=ExtResource( 57 )]
+transform = Transform( 0.619446, 0, 2.23517e-08, 0, 1, 0, 0, 0, 1, 3.9361, 0, -0.698999 )
+
+[node name="barriere grande2" parent="Zone texte training yard" instance=ExtResource( 57 )]
+transform = Transform( 0.619446, 0, 2.23517e-08, 0, 1, 0, 0, 0, 1, -3.41838, 0, -0.698999 )
+
+[node name="StaticBody" type="StaticBody" parent="Zone texte training yard"]
+transform = Transform( 1, 0, 2.23517e-08, 0, 1, 0, 0, 0, 1, 9.53674e-07, 0, -0.736881 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Zone texte training yard/StaticBody"]
+transform = Transform( 1, 0, 1.49012e-08, 0, 1, 0, 0, 0, 1, 0.255651, 0.723289, -0.167345 )
+shape = SubResource( 7 )
+
+[node name="zone camera tourne course" type="Area" parent="."]
+transform = Transform( 0.998774, 0, 0.0494949, 0, 1, 0, -0.0494949, 0, 0.998774, -0.211096, 0, 35.3532 )
+script = ExtResource( 55 )
+vitesse_transition = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="zone camera tourne course"]
+shape = SubResource( 6 )
+
+[node name="Zone texte camera change" parent="zone camera tourne course" instance=ExtResource( 49 )]
+transform = Transform( 1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0, 0 )
+texte = [ "Fuck this, I look in the direction I want." ]
+temps_texte = 3
+must_have_stick = false
+
+[node name="zone camera tourne village" type="Area" parent="."]
+transform = Transform( 0.808596, 0, 0.588364, 0, 1, 0, -0.588364, 0, 0.808596, 14.0145, 0, 12.2397 )
+script = ExtResource( 55 )
+destroy_autre = true
+
+[node name="CollisionShape" type="CollisionShape" parent="zone camera tourne village"]
+shape = SubResource( 6 )
+[connection signal="timeout" from="game manager/TimerCacheAnnonce" to="game manager" method="cache_annonce"]
+[connection signal="timeout" from="game manager/Timer particules" to="game manager" method="_on_Timer_particules_timeout"]
+[connection signal="timeout" from="CanvasLayer/Control/VBoxContainer/dialogues/Timer" to="CanvasLayer/Control/VBoxContainer" method="_on_Timer_timeout"]
+[connection signal="button_down" from="CanvasLayer/Control/menu in game/resume" to="CanvasLayer/Control/menu in game" method="_on_resume_button_down"]
+[connection signal="button_down" from="CanvasLayer/Control/menu in game/menu" to="CanvasLayer/Control/menu in game" method="_on_menu_button_down"]
+[connection signal="button_down" from="CanvasLayer/Control/menu in game/quit" to="CanvasLayer/Control/menu in game" method="_on_quit_button_down"]
+[connection signal="body_entered" from="groupe trouve baton/baton a ramasser/Area" to="groupe trouve baton/baton a ramasser" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="groupe trouve baton/baton a ramasser/Area" to="groupe trouve baton/baton a ramasser" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="decor/centre de controle/PNJ  1/Area" to="decor/centre de controle/PNJ  1" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="decor/centre de controle/PNJ  1/Area" to="decor/centre de controle/PNJ  1" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="decor/centre de controle 2/PNJ  2/Area" to="decor/centre de controle 2/PNJ  2" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="decor/centre de controle 2/PNJ  2/Area" to="decor/centre de controle 2/PNJ  2" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="PNJS/PNJ  vieux/Area" to="PNJS/PNJ  vieux" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="PNJS/PNJ  vieux/Area" to="PNJS/PNJ  vieux" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="PNJS/centre de controle2/PNJ  1/Area" to="PNJS/centre de controle2/PNJ  1" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="PNJS/centre de controle2/PNJ  1/Area" to="PNJS/centre de controle2/PNJ  1" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="course/zone arrete temps" to="course/zone arrete temps" method="_on_zone_declenche_nuit_body_entered"]
+[connection signal="body_entered" from="course/zone relance temps" to="course/zone relance temps" method="_on_zone_declenche_nuit_body_entered"]
+[connection signal="body_entered" from="zone has tried race" to="zone has tried race" method="_on_zone_declenche_nuit_body_entered"]
+[connection signal="body_entered" from="zone declenche nuit" to="zone declenche nuit" method="_on_zone_declenche_nuit_body_entered"]
+[connection signal="body_entered" from="zone declenche annonce" to="zone declenche annonce" method="_on_zone_declenche_nuit_body_entered"]
+[connection signal="body_entered" from="Zone texte boo" to="Zone texte boo" method="_on_Area_body_entered"]
+[connection signal="timeout" from="Zone texte boo/Timer texte" to="Zone texte boo" method="_on_Timer_texte_timeout"]
+[connection signal="body_entered" from="zone camera tourne course" to="zone camera tourne course" method="_on_zone_camera_tourne_body_entered"]
+[connection signal="body_entered" from="zone camera tourne village" to="zone camera tourne village" method="_on_zone_camera_tourne_body_entered"]

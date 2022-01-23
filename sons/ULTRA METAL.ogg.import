@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ULTRA METAL.ogg-78fc904f4548d6df910b7b2a0221a738.oggstr"
+
+[deps]
+
+source_file="res://sons/ULTRA METAL.ogg"
+dest_files=[ "res://.import/ULTRA METAL.ogg-78fc904f4548d6df910b7b2a0221a738.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
